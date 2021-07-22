@@ -64,7 +64,15 @@ class ViewController: UIViewController {
 
     private var DirectoryAlgoTextField : UITextField = {
             let TextField = UITextField()
-            TextField.placeholder = "Enter your input here"
+            TextField.placeholder = "Enter your directory input here"
+            TextField.translatesAutoresizingMaskIntoConstraints = false
+            TextField.borderStyle = .roundedRect
+            return TextField
+        }()
+    
+    private var CommandAlgoTextField : UITextField = {
+            let TextField = UITextField()
+            TextField.placeholder = "Enter your command input here"
             TextField.translatesAutoresizingMaskIntoConstraints = false
             TextField.borderStyle = .roundedRect
             return TextField
@@ -113,7 +121,7 @@ class ViewController: UIViewController {
         view.addSubview(RepeatAlgoConvertButton)
         view.addSubview(RepeatAlgoOutPutLabel)
         
-        RepeatAlgoHeadingLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 60).isActive = true
+        RepeatAlgoHeadingLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
         RepeatAlgoHeadingLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 3).isActive = true
         RepeatAlgoHeadingLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -3).isActive = true
         RepeatAlgoHeadingLabel.heightAnchor.constraint(equalToConstant: 44).isActive = true
@@ -134,8 +142,9 @@ class ViewController: UIViewController {
         view.addSubview(DirectoryAlgoTextField)
         view.addSubview(DirectoryAlgoConvertButton)
         view.addSubview(DirectoryAlgoOutPutLabel)
+        view.addSubview(CommandAlgoTextField)
         
-        DirectoryAlgoHeadingLabel.topAnchor.constraint(equalTo: RepeatAlgoOutPutLabel.bottomAnchor, constant: 45).isActive = true
+        DirectoryAlgoHeadingLabel.topAnchor.constraint(equalTo: RepeatAlgoOutPutLabel.bottomAnchor, constant: 15).isActive = true
         DirectoryAlgoHeadingLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 3).isActive = true
         DirectoryAlgoHeadingLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -3).isActive = true
         DirectoryAlgoHeadingLabel.heightAnchor.constraint(equalToConstant: 44).isActive = true
@@ -143,7 +152,11 @@ class ViewController: UIViewController {
         DirectoryAlgoTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
         DirectoryAlgoTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
         DirectoryAlgoTextField.heightAnchor.constraint(equalToConstant: 44).isActive = true
-        DirectoryAlgoConvertButton.topAnchor.constraint(equalTo: DirectoryAlgoTextField.bottomAnchor, constant: 15).isActive = true
+        CommandAlgoTextField.topAnchor.constraint(equalTo: DirectoryAlgoTextField.bottomAnchor, constant: 15).isActive = true
+        CommandAlgoTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
+        CommandAlgoTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
+        CommandAlgoTextField.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        DirectoryAlgoConvertButton.topAnchor.constraint(equalTo: CommandAlgoTextField.bottomAnchor, constant: 15).isActive = true
         DirectoryAlgoConvertButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
         DirectoryAlgoConvertButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
         DirectoryAlgoConvertButton.heightAnchor.constraint(equalToConstant: 44).isActive = true
@@ -163,8 +176,8 @@ extension ViewController {
     }
     
     @objc func directoryAlgoButtonPressed() {
-        if DirectoryAlgoTextField.text != "" {
-            DirectoryAlgoOutPutLabel.text = Calculation.findDirectoryPath(DirectoryAlgoTextField.text!)
+        if DirectoryAlgoTextField.text != "" && CommandAlgoTextField.text != ""{
+            DirectoryAlgoOutPutLabel.text = Calculation.findDirectoryPath(DirectoryAlgoTextField.text!, command: CommandAlgoTextField.text!)
         }
     }
 }

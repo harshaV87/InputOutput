@@ -54,14 +54,15 @@ class Calculation {
             ultimateArray.remove(at: indexToBeRemoved)
         }
         return ultimateArray.joined()
-        
     }
     
-    static func findDirectoryPath(_ givenString: String) -> String {
+    static func findDirectoryPath(_ initialDirectory: String, command: String) -> String {
         
-        // converting the string to an array so we can perform operations on each element and typecasting it to a string element. Variable i is created to cope with the while loop while traversing therough the arrayString. Since we have to work with a set of elements such as ./ or ../, we create 2 different arrays to store the values to determine the operations that need to be performed with the consequitive elements
+        // converting the strings to an array so we can perform operations on each element and typecasting it to a string element. Variable i is created to cope with the while loop while traversing therough the arrayString. Since we have to work with a set of elements such as ./ or ../, we create 2 different arrays to store the values to determine the operations that need to be performed with the consequitive elements
         
-        var arrayString = givenString.map {String($0)}
+        let joinedString = initialDirectory + ", " + command
+        var arrayString = joinedString.map {String($0)}
+       
         if arrayString.last == "." {
             arrayString.append(" ")
         }
@@ -100,6 +101,12 @@ class Calculation {
                 actualArray.append(arrayString[i])
             }
             i += 1
+        }
+        
+        if let lastOne = actualArray.last {
+            if lastOne == "/" {
+                actualArray.removeLast()
+            }
         }
         return actualArray.joined()
     }
