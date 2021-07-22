@@ -15,6 +15,9 @@
 		024BE8A526A9014500C35AB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024BE8A326A9014500C35AB7 /* LaunchScreen.storyboard */; };
 		024BE8B026A9014500C35AB7 /* InputOutputTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024BE8AF26A9014500C35AB7 /* InputOutputTests.swift */; };
 		024BE8BB26A9014600C35AB7 /* InputOutputUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024BE8BA26A9014600C35AB7 /* InputOutputUITests.swift */; };
+		024BE8C926A9019100C35AB7 /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024BE8C826A9019100C35AB7 /* Algorithm.swift */; };
+		024BE8CA26A9378700C35AB7 /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024BE8C826A9019100C35AB7 /* Algorithm.swift */; };
+		024BE8CB26A9378700C35AB7 /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024BE8C826A9019100C35AB7 /* Algorithm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,7 @@
 		024BE8B626A9014600C35AB7 /* InputOutputUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InputOutputUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		024BE8BA26A9014600C35AB7 /* InputOutputUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputOutputUITests.swift; sourceTree = "<group>"; };
 		024BE8BC26A9014600C35AB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		024BE8C826A9019100C35AB7 /* Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 				024BE89826A9014200C35AB7 /* AppDelegate.swift */,
 				024BE89A26A9014200C35AB7 /* SceneDelegate.swift */,
 				024BE89C26A9014200C35AB7 /* ViewController.swift */,
+				024BE8C826A9019100C35AB7 /* Algorithm.swift */,
 				024BE89E26A9014200C35AB7 /* Main.storyboard */,
 				024BE8A126A9014500C35AB7 /* Assets.xcassets */,
 				024BE8A326A9014500C35AB7 /* LaunchScreen.storyboard */,
@@ -259,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				024BE89D26A9014200C35AB7 /* ViewController.swift in Sources */,
+				024BE8C926A9019100C35AB7 /* Algorithm.swift in Sources */,
 				024BE89926A9014200C35AB7 /* AppDelegate.swift in Sources */,
 				024BE89B26A9014200C35AB7 /* SceneDelegate.swift in Sources */,
 			);
@@ -269,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				024BE8B026A9014500C35AB7 /* InputOutputTests.swift in Sources */,
+				024BE8CA26A9378700C35AB7 /* Algorithm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				024BE8BB26A9014600C35AB7 /* InputOutputUITests.swift in Sources */,
+				024BE8CB26A9378700C35AB7 /* Algorithm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
